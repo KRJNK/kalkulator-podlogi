@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalkulator paneli — ile kupić na podłogę</title>
+<meta name="description" content="Ile paneli lub desek na podłogę? Podaj metraż i wielkość paczki — doliczymy zapas na docinki.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪵</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <!-- TODO: link do portfolio, gdy powstanie -->
+  <h1>Panele na podłogę</h1>
+  <p>Metraż → paczki z zapasem na docinki.</p>
+  <section class="card">
+    <label>Powierzchnia (m²) <input id="m2" type="number" min="0" step="any" value="20"></label>
+    <label>Paczka kryje (m²) <input id="pacz" type="number" min="0" step="any" value="2.5"></label>
+    <label>Zapas na docinki (%) <input id="zap" type="number" min="0" max="30" value="10"></label>
+  </section>
+  <section class="card">
+    <h2>Wynik</h2>
+    <div id="out" class="big">—</div>
+    <p id="detail" class="hint"></p>
+  </section>
+  <section class="card">
+    <h2>Jak to działa</h2>
+    <p>Metraż mnożymy przez (1 + zapas), a wynik dzielimy przez krycie paczki i zaokrąglamy w górę — paczek nie kupisz na części. Standardowy zapas 10% starcza przy prostych pokojach; przy skosach, wnękach i układaniu w jodełkę weź 15%, bo docinek jest wyraźnie więcej.</p>
+    <p><strong>Przykład:</strong> 20 m², paczka 2,5 m², zapas 10% — potrzeba 22 m², czyli 9 paczek (22,5 m²). Resztki zostaw na ewentualne naprawy: ten sam dekor po roku bywa niedostępny.</p>
+  </section>
+  <div id="ads-slot" hidden></div>
+  <footer><a href="privacy.html">Prywatność</a> · <a href="kontakt.html">Kontakt</a></footer>
+</main>
+<script src="app.js"></script>
+<script src="ads.js"></script>
+</body>
+</html>
